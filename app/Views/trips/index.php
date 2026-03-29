@@ -136,12 +136,14 @@
                 </thead>
                 <tbody id="tripTableBody">
                     <?php if (!empty($trips)): ?>
+                        <?php $i = 1; ?>
                         <?php foreach ($trips as $trip): ?>
                             <tr class="trip-row"
                                 data-lat="<?= esc($trip['latitude']) ?>"
                                 data-lng="<?= esc($trip['longitude']) ?>"
                                 data-destination="<?= esc($trip['destination']) ?>">
-                                <td>#<?= esc($trip['id']) ?></td>
+                                
+                                <td>#<?= $i++ ?></td>
 
                                 <td>
                                     <div class="destination-cell">
