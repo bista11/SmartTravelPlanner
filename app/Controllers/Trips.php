@@ -25,10 +25,10 @@ class Trips extends BaseController
                     ->orLike('country', $search)
                     ->orLike('notes', $search)
                 ->groupEnd()
-                ->orderBy('id', 'DESC')
+                ->orderBy('id', 'ASC')
                 ->findAll();
         } else {
-            $trips = $this->tripModel->orderBy('id', 'DESC')->findAll();
+            $trips = $this->tripModel->orderBy('id', 'ASC')->findAll();
         }
 
         return view('trips/index', [
